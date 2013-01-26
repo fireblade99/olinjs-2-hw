@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  title= title
+  br
+  h1= 'Listing cats which have the color ' + color
+  br
+  h3= 'Sorted by age in ascending order'
+  br
+  br
+  div
+    table
+      thead
+        tr: th Name
+            th Age
+            th Colors
+      tbody
+        each cat in cats
+          tr
+            td
+              p= cat.name
+            td
+              p= cat.age
+            td
+              p= cat.colors

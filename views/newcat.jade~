@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+        title= title
+        h1= 'Make a new Cat'
+        
+        div
+          form(action='/newcat', method='post')
+            div(data-role='fieldcontain')
+              fieldset(data-role='controlgroup')
+                label(for='name') Name of the cat
+                input(id='name', type='text', value='', placeholder='Enter name...', name="name")
+            div(data-role='fieldcontain')
+              fieldset(data-role='controlgroup')
+                label(for='age') Age of the cat
+                input(id='age', type='number', value='', placeholder='', name="age")
+            div(data-role='fieldcontain')
+              fieldset(data-role='controlgroup')
+                label(for='colors') Colors of the cat (seperate with a space)
+                input(id='colors', type='text', value='', placeholder='Enter color...', name="colors")
+            div(data-role='fieldcontain')
+              input(type='submit', value='Make a cat', data-transition='fade', data-theme='c')
